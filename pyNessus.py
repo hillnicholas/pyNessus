@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+# Simple wrapper of the requests library catered towards the Nessus scanner web interface.
+
 
 import requests, getpass
 
@@ -66,7 +70,7 @@ if __name__ == "__main__":
 	scanner = Nessus("127.0.0.1")
 	
 	# set the proxies (probably not needed for your access)
-	scanner.proxies =  dict( http = "socks5://localhost:8080", https = "socks5://localhost:8080" )
+	scanner.proxies =  PROXY
 	
 	# disable warnings for bad SSL certs
 	scanner.verify = False
